@@ -1,0 +1,83 @@
+body {
+    margin: 0px;
+    font-family: "Open Sans";
+    background-color: lavenderblush;
+    color: cadetblue;
+}
+
+button {
+    box-shadow: 2px 2px 5px 3px rgb(235, 190, 205);
+}
+
+h1 {
+    font-family: "Chango";
+    font-size: 60px;
+    text-align: center;
+    color: cadetblue;
+    line-height: 70%;
+}
+h2 {
+    text-align:center;
+}
+.card {
+    width: 250px;
+    height: auto;
+    background-color: lavenderblush;
+    padding: 40px 20px;
+    font-size:medium;
+    border-radius: 7%;
+    box-shadow: 5px 5px 10px 7px rgb(235, 190, 205);
+    margin: 50px;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 0px 200px 0px 200px;
+}
+.skill-form {
+    margin:10px;
+}
+.skill-select {
+    width: 250px;
+    height: auto;
+    background-color: lavenderblush;
+    margin: auto;
+    border-radius: 7%;
+    box-shadow: 5px 5px 10px 7px rgb(235, 190, 205);
+
+}
+.skill-submit {
+    padding-left: 20px;
+    text-align: center;
+}
+.results {
+    width: 400px;
+    height: auto;
+    background-color:lavenderblush;
+    border-radius: 7%;
+    box-shadow: 5px 5px 10px 7px rgb(235, 190, 205);
+    margin: 0px auto;
+    padding: 5px 10px;
+    visibility: hidden;
+
+}
+nav {
+    margin: 0;
+    box-shadow: 5px 5px 10px 7px rgb(235, 190, 205);
+    background-color: lavenderblush;
+    padding: 5px;
+    text-align:center;
+}
+.p-info-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.p1-info {
+    padding-left: 10px;
+}
+.p2-info {
+    padding-right: 10px;
+}

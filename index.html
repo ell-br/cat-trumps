@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Card Game</title>
+  </head>
+  <body>
+    <nav>
+    <h1>CatTrumps</h1>
+      <button class="deal-btn">Start Game</button><br>
+      <button class="next-btn">Next Card</button><br>
+      <div class="p-info-div">
+      <span class="p1-info"></span>
+      <span class="p2-info"></span>
+    </div>
+    </nav>
+    <div class="card-container">
+      <div class="player1 card">
+        <h2>Player 1</h2>
+        <span class="card-name">Name:<span class="card-name-value"></span></span
+        ><br />
+        <span class="card-cuteness"
+          >Cuteness:<span class="card-cuteness-value"></span></span
+        ><br />
+        <span class="card-strength"
+          >Strength:<span class="card-strength-value"></span></span
+        ><br />
+        <span class="card-clumsiness"
+          >Clumsiness:<span class="card-clumsiness-value"></span></span
+        ><br />
+        <span class="card-stank"
+          >Stank:<span class="card-stank-value"></span></span
+        ><br />
+      </div>
+      <br />
+      
+      <div class="skill-select card">
+         <h2>Select category:</h2>
+      <form class="skill-form">
+        <input type="radio" name="skill" id="cuteness" value="cuteness" />
+        <label for="cuteness">Cuteness</label><br>
+        <input type="radio" name="skill" id="strength" value="strength" />
+        <label for="strength">Strength</label><br>
+        <input type="radio" name="skill" id="clumsiness" value="clumsiness" />
+        <label for="clumsiness">Clumsiness</label><br>
+        <input type="radio" name="skill" id="stank" value="stank" />
+        <label for="stank">Stank</label>
+      </form><br>
+      <button id="skill-submit" class="BUTTON_GFL">Battle!</button>
+    </div>
+
+      <div class="player2 card">
+        <h2>Player 2</h2>
+        <span class="player2-name"
+          >Name:<span class="player2-name-value p2-hide"></span></span
+        ><br />
+        <span class="player2-cuteness"
+          >Cuteness:<span class="player2-cuteness-value p2-hide"></span></span
+        ><br />
+        <span class="player2-strength"
+          >Strength:<span class="player2-strength-value p2-hide"></span></span
+        ><br />
+        <span class="player2-clumsiness"
+          >Clumsiness:<span class="player2-clumsiness-value p2-hide"></span></span
+        ><br />
+        <span class="player2-stank"
+          >Stank:<span class="player2-stank-value p2-hide"></span></span
+        ><br />
+      </div>
+      <br />
+    </div>
+
+    <div class="results">
+      <p id="results-text">Results here...</p>
+    </div>
+    <br /><br />
+    <script src="index.js"></script>
+  </body>
+</html>
