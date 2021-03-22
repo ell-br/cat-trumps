@@ -40,6 +40,13 @@ var alreadyAssigned = [];
 var winnerDeck = [];
 var result = "";
 var p2Stats = document.querySelectorAll(".p2-hide");
+
+// Returns random num 0-11
+function randomNum() {
+        return Math.floor(Math.random() * cardArray.length);
+      }
+
+
 // Displays the values from Player 2 Card
   function showPlayer1Card() {
     document.querySelector(".card-name-value").innerHTML = player1Deck[0].name;
@@ -70,7 +77,6 @@ function showPlayer2Card() {
 }
 
 // Randomly splits cardArray between 2 players' decks, and reveals player1 card.
-// WHY DOES THIS SOMETIMES ASSIGN LESS THAN 6 CARDS TO PLAYERS?
 function cardCounter() {
   document.querySelector(".p1-info").innerHTML = "Player 1 - Cards: " + player1Deck.length;
   document.querySelector(".p2-info").innerHTML = "Player 2 - Cards: " + player2Deck.length;
@@ -78,18 +84,18 @@ function cardCounter() {
 
 function newGame() {
   function deal() {
-    for (i = 0; i < cardArray.length; i++) {
-      var whichPlayer = Math.floor(Math.random() * 2);
-      console.log(whichPlayer);
-      if (whichPlayer === 0 && player1Deck.length < 6) {
-        player1Deck.push(cardArray[i]);
-      } else if (whichPlayer === 1 && player2Deck.length < 6) {
-        player2Deck.push(cardArray[i]);
-      }
+    
+
+      for (i = 0; i < cardArray.length; i++) {
+        let card = cardArray[randomNum()];
+        while(player1Deck.includes(card) || player2Deck.includes(card)) {
+          card = cardArray[randomNum()];
+        }
+        i<cardArray.length/2 ? player1Deck.push(card) : player2Deck.push(card);
+        }
     }
     console.log(player1Deck);
     console.log(player2Deck);
-  }
 
   deal();
   showPlayer1Card();
