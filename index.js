@@ -84,7 +84,7 @@ function cardCounter() {
 
 function newGame() {
   function deal() {
-    
+
 
       for (i = 0; i < cardArray.length; i++) {
         let card = cardArray[randomNum()];
@@ -151,7 +151,8 @@ function showDown() {
   getScores();
   whoWins();
   showPlayer2Card();
-  document.getElementById("results-text").innerHTML =
+  document.getElementById("results-text").innerHTML = result;
+  document.getElementById("scores-text").innerHTML =
     "Player 1: " +
     choice +
     ": " +
@@ -160,8 +161,7 @@ function showDown() {
     choice +
     ": " +
     player2Score +
-    ". " +
-    result;
+    ". ";
   document.querySelector(".results").style.visibility = "visible";
 }
 
