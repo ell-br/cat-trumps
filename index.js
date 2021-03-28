@@ -1,23 +1,24 @@
-function CharacterCard(name, cuteness, strength, clumsiness, stank) {
+function CharacterCard(name, cuteness, strength, clumsiness, stank, image) {
   this.name = name;
   this.cuteness = cuteness;
   this.strength = strength;
   this.clumsiness = clumsiness;
   this.stank = stank;
+  this.image = image;
 }
 // Card Variables
-var card1 = new CharacterCard("Kevin", 100, 20, 50, 100);
-var card2 = new CharacterCard("Sophie", 100, 80, 90, 0);
-var card3 = new CharacterCard("Ell", 60, 40, 70, 50);
-var card4 = new CharacterCard("Grulk", 90, 10, 10, 20);
-var card5 = new CharacterCard("Ziggy D", 85, 90, 40, 90);
-var card6 = new CharacterCard("Ziggy C", 99, 20, 60, 30);
-var card7 = new CharacterCard("Zelda", 80, 75, 30, 40);
-var card8 = new CharacterCard("Muffin", 95, 45, 65, 25);
-var card9 = new CharacterCard("Tom", 85, 70, 80, 70);
-var card10 = new CharacterCard("Lily", 80, 85, 20, 40);
-var card11 = new CharacterCard("Esther", 90, 20, 30, 20);
-var card12 = new CharacterCard("Letty", 85, 100, 80, 75);
+var card1 = new CharacterCard("Bernie", 100, 20, 50, 100, "images/catimg1.jpeg");
+var card2 = new CharacterCard("Biscuits", 100, 80, 90, 0, "images/catimg2.jpeg");
+var card3 = new CharacterCard("Suki", 60, 40, 70, 50, "images/catimg3.jpeg");
+var card4 = new CharacterCard("Nacho", 60, 10, 90, 20, "images/catimg4.jpeg");
+var card5 = new CharacterCard("Momo", 85, 90, 40, 90, "images/catimg5.jpeg");
+var card6 = new CharacterCard("Sal", 99, 20, 60, 30, "images/catimg6.jpeg");
+var card7 = new CharacterCard("Pibbles", 80, 75, 30, 70, "images/catimg7.jpeg");
+var card8 = new CharacterCard("Ginger", 95, 45, 65, 25, "images/catimg8.jpeg");
+var card9 = new CharacterCard("Alan", 85, 70, 80, 70, "images/catimg8.jpeg");
+var card10 = new CharacterCard("Cookie", 60, 85, 20, 40, "images/catimg8.jpeg");
+var card11 = new CharacterCard("Angel", 90, 20, 60, 20, "images/catimg8.jpeg");
+var card12 = new CharacterCard("Pepe", 55, 100, 80, 75, "images/catimg8.jpeg");
 var cardArray = [
   card1,
   card2,
@@ -49,6 +50,8 @@ function randomNum() {
 
 // Displays the values from Player 2 Card
   function showPlayer1Card() {
+    document.querySelector("#p1-img").src = player1Deck[0].image;
+    console.log(document.querySelector("#p1-img").src);
     document.querySelector(".card-name-value").innerHTML = player1Deck[0].name;
     document.querySelector(".card-cuteness-value").innerHTML =
       player1Deck[0].cuteness;
@@ -60,6 +63,7 @@ function randomNum() {
       player1Deck[0].stank;
   }
 function showPlayer2Card() {
+  document.querySelector("#p2-img").src = player2Deck[0].image;
   document.querySelector(".player2-name-value").innerHTML = player2Deck[0].name;
   document.querySelector(".player2-cuteness-value").innerHTML =
     player2Deck[0].cuteness;
