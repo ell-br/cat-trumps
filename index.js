@@ -1,4 +1,4 @@
-function CharacterCard(name, cuteness, strength, clumsiness, stank) {
+function CharacterCard(name, cuteness, strength, clumsiness, stank, image) {
   this.name = name;
   this.cuteness = cuteness;
   this.strength = strength;
@@ -6,14 +6,14 @@ function CharacterCard(name, cuteness, strength, clumsiness, stank) {
   this.stank = stank;
 }
 // Card Variables
-var card1 = new CharacterCard("Kevin", 100, 20, 50, 100);
-var card2 = new CharacterCard("Sophie", 100, 80, 90, 0);
-var card3 = new CharacterCard("Ell", 60, 40, 70, 50);
-var card4 = new CharacterCard("Grulk", 90, 10, 10, 20);
-var card5 = new CharacterCard("Ziggy D", 85, 90, 40, 90);
-var card6 = new CharacterCard("Ziggy C", 99, 20, 60, 30);
-var card7 = new CharacterCard("Zelda", 80, 75, 30, 40);
-var card8 = new CharacterCard("Muffin", 95, 45, 65, 25);
+var card1 = new CharacterCard("Kevin", 100, 20, 50, 100, "catimg1.jpeg");
+var card2 = new CharacterCard("Sophie", 100, 80, 90, 0, "catimg2.jpeg");
+var card3 = new CharacterCard("Ell", 60, 40, 70, 50, "catimg3.jpeg");
+var card4 = new CharacterCard("Grulk", 90, 10, 10, 20, "catimg4.jpeg");
+var card5 = new CharacterCard("Ziggy D", 85, 90, 40, 90, "catimg5.jpeg");
+var card6 = new CharacterCard("Ziggy C", 99, 20, 60, 30, "catimg6.jpeg");
+var card7 = new CharacterCard("Zelda", 80, 75, 30, 40, "catimg7.jpeg");
+var card8 = new CharacterCard("Muffin", 95, 45, 65, 25, "catimg8.jpeg");
 var card9 = new CharacterCard("Tom", 85, 70, 80, 70);
 var card10 = new CharacterCard("Lily", 80, 85, 20, 40);
 var card11 = new CharacterCard("Esther", 90, 20, 30, 20);
@@ -49,6 +49,7 @@ function randomNum() {
 
 // Displays the values from Player 2 Card
   function showPlayer1Card() {
+    document.querySelector("#p1-img").src = "images/" + player1Deck[0].image;
     document.querySelector(".card-name-value").innerHTML = player1Deck[0].name;
     document.querySelector(".card-cuteness-value").innerHTML =
       player1Deck[0].cuteness;
@@ -60,6 +61,7 @@ function randomNum() {
       player1Deck[0].stank;
   }
 function showPlayer2Card() {
+  document.querySelector("#p2-img").src = "images/" + player2Deck[0].image;
   document.querySelector(".player2-name-value").innerHTML = player2Deck[0].name;
   document.querySelector(".player2-cuteness-value").innerHTML =
     player2Deck[0].cuteness;
