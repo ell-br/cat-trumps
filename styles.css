@@ -23,7 +23,7 @@ h2 {
     width: 250px;
     height: auto;
     background-color: lavenderblush;
-    padding: 40px 20px;
+    padding: 20px 20px;
     font-size:medium;
     border-radius: 7%;
     box-shadow: 5px 5px 10px 7px rgb(235, 190, 205);
@@ -80,4 +80,9 @@ nav {
 }
 .p2-info {
     padding-right: 10px;
+}
+
+#p1-img, #p2-img {
+    width:200px;
+    height:200px;
 }
